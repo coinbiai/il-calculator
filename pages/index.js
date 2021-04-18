@@ -3,11 +3,12 @@ import { useRouter } from "next/router";
 import { useForm, useWatch } from "react-hook-form";
 import bn from "bignumber.js";
 import Collapse from "@material-ui/core/Collapse";
-import Link from '@material-ui/core/Link';
+import Link from "@material-ui/core/Link";
 
 import TextField from "@components/TextField";
 import Block from "@components/Block";
 import Results from "@components/Results";
+import GithubIcon from "@components/GithubIcon";
 
 bn.config({ DECIMAL_PLACES: 6 });
 
@@ -66,8 +67,16 @@ export default function App() {
   return (
     <div className="root">
       <h1>無常損失計算機</h1>
-      <p className='dev'>
-        Developed by <Link href="https://www.facebook.com/CoinBiAi">幣癌</Link>
+      <p className="dev">
+        {"Developed by\u00a0"}{" "}
+        <Link href="https://www.facebook.com/CoinBiAi">幣癌</Link>
+        <a
+          className="github"
+          href="https://github.com/coinbiai/il-calculator"
+          aria-label="Visit Github"
+        >
+          <GithubIcon />
+        </a>
       </p>
 
       <Block title="流動性挖礦幣對">
@@ -152,8 +161,12 @@ export default function App() {
           text-align: center;
         }
         .dev {
-          text-align: center;
-          font-size: 0.875rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .github {
+          margin: 4px 0 0 8px;
         }
         .line {
           display: flex;

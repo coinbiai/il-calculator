@@ -1,0 +1,26 @@
+html {
+  font-size: 14px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* vars */
+
+:root {
+  --color-gain: #4caf50;
+  --color-loss: #f44336;
+}

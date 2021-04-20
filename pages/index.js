@@ -97,10 +97,9 @@ export default function App() {
         </div>
       </Block>
 
-      <Collapse in={Boolean(t1 && t2)}>
         <Block title="投入時匯率">
           <div className="line">
-            {`1顆${t1 || ""} ＝\u00a0`}
+            {`1顆 ${t1 || "___"} ＝\u00a0`}
             <TextField
               type="number"
               {...register("price1", rules)}
@@ -110,7 +109,7 @@ export default function App() {
             {"\u00a0美金"}
           </div>
           <div className="line">
-            {`1顆${t2 || ""} ＝\u00a0`}
+            {`1顆 ${t2 || "___"} ＝\u00a0`}
             <TextField
               type="number"
               {...register("price2", rules)}
@@ -123,7 +122,7 @@ export default function App() {
 
         <Block title="贖回時匯率">
           <div className="line">
-            {`1顆${t1 || ""} ＝\u00a0`}
+            {`1顆 ${t1 || "___"} ＝\u00a0`}
             <TextField
               type="number"
               {...register("price1After", rules)}
@@ -133,7 +132,7 @@ export default function App() {
             {"\u00a0美金"}
           </div>
           <div className="line">
-            {`1顆${t2 || ""} ＝\u00a0`}
+            {`1顆 ${t2 || "___"} ＝\u00a0`}
             <TextField
               type="number"
               {...register("price2After", rules)}
@@ -143,7 +142,6 @@ export default function App() {
             {"\u00a0美金"}
           </div>
         </Block>
-      </Collapse>
 
       <Collapse
         in={Boolean(t1 && t2 && price1 && price2 && price1After && price2After)}

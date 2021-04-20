@@ -141,6 +141,10 @@ const Results = ({ t1, t2, price1, price2, price1After, price2After }) => {
       </Button>
       <div className="title">無常損失：{il.toFixed()}%</div>
 
+      <div className='title'>份額變化:</div>
+      <p>入池份額：1 {t1} ＋ {k.toFixed()} {t2}</p>
+      <p>贖回份額：{x.toFixed()} {t1} ＋ {y.toFixed()} {t2}</p>
+
       <p className="title">
         如果你原本打算同時持有{t1}和{t2}，<br />
         參與流動性挖礦會讓你{renderTerm(pyHold, pyPool)}
